@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>ABC Dictation Application</title>
+<meta charset="UTF-8">
+<!--<link rel="stylesheet" href="styles/layout.css" type="text/css">-->
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/layout.css') }}" type="text/css">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">ABC Dictation Application</a></h1>
+      <h2>Start dictating patient notes</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Dictate</a></li>
+        <li><a href="#">Sign</a></li>
+        <li><a href="#">Lock</a></li>
+        <li class="last"><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- Slider -->
+    <!--<section id="slider"><a href="#"><img src="{{ url_for('static', filename='960x360.gif') }}"></a></section>-->
+	
+	<!-- main content -->
+    <div id="homepage">
+      <!-- Services -->
+      <section id="services" class="clear">
+         <section id="slider">
+		<h1><b>DICTATION APPLICATION HOME PAGE</b></h1></br>
+		<div>
+			<h2>Patient ID: <input type="text" id="patientId" name="patientId"></h2>
+		</div>
+		<div>
+			<h2>Accession ID: <input type="text" id="accessionId" name="accessionId"></h2>
+		</div>
+		<div>
+			<h2>Action: <input type="text" id="patientAction" name="patientAction"></h2>
+		</div>	
+	</section>
+			<p><button id="update-operation">Update</button></p>
+      </section>
+      <!-- / Services -->
+      <!-- ########################################################################################## -->
+      <!-- ########################################################################################## -->
+      <!-- ########################################################################################## -->
+      <!-- ########################################################################################## -->
+      <!-- Introduction -->
+      <section id="intro" class="last clear">
+        <article>
+          <figure><img src="{{ url_for('static', filename='SubscriptionEHRapplicationPending.gif') }}" width="450" id="subImg" height="250" alt="">
+            <figcaption>
+              <h2><b>Subscribe to Radiology session</b></h2>
+              <p><h4>Enter the application info</h4></p><p><input type="text" id="topic" name="topic" width="125"></p>
+              <p>	
+				<input type="checkbox" id="open-patient-chart" name="open-patient-chart" value="open-patient-chart"><label>Open Patient</label><br/>
+				<input type="checkbox" id="close-patient-chart" name="close-patient-chart" value="close-patient-chart"><label>Close Patient</label><br/>
+				<input type="checkbox" id="open-imaging-study" name="open-imaging-study" value="open-imaging-study"><label>Open Study</label><br/>
+				<input type="checkbox" id="close-imaging-study" name="close-imaging-study" value="close-imaging-study"><label>Close Study</label><br/><br/>
+				<button id="long-running-operation" width="200" height="125">Subscribe</button>
+			</p>
+			  <p><button id="unsubscribe-operation">Un-subscribe</button></p>
+              <footer class="more"><a href="#">Read More &raquo;</a></footer>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+	  <!-- Logging -->
+      <section id="intro" class="last clear">
+        <article>
+            <figcaption>
+              <h2><b>Server Logs</b></h2>
+              <p id="log"></p>
+              <footer class="more"><a href="#">Read More &raquo;</a></footer>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+      <!-- / Introduction -->
+    </div>
+    <!-- / content body -->
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <div id="footer" class="clear">
+    <!-- Section One -->
+    <section class="one_quarter">
+      <h2 class="title">Link Block</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor sit</a></li>
+          <li><a href="#">Amet consectetur</a></li>
+          <li><a href="#">Praesent vel sem id</a></li>
+          <li><a href="#">Curabitur hendrerit est</a></li>
+          <li class="last"><a href="#">Sed a nulla urna</a></li>
+        </ul>
+      </nav>
+    </section>
+    <!-- Section Two -->
+    <section class="one_quarter">
+      <h2 class="title">Link Block</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor sit</a></li>
+          <li><a href="#">Amet consectetur</a></li>
+          <li><a href="#">Praesent vel sem id</a></li>
+          <li><a href="#">Curabitur hendrerit est</a></li>
+          <li class="last"><a href="#">Sed a nulla urna</a></li>
+        </ul>
+      </nav>
+    </section>
+    <!-- Section Three -->
+    <section class="one_quarter">
+      <h2 class="title">Link Block</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor sit</a></li>
+          <li><a href="#">Amet consectetur</a></li>
+          <li><a href="#">Praesent vel sem id</a></li>
+          <li><a href="#">Curabitur hendrerit est</a></li>
+          <li class="last"><a href="#">Sed a nulla urna</a></li>
+        </ul>
+      </nav>
+    </section>
+    <!-- Section Four -->
+    <section class="one_quarter lastbox">
+      <h2 class="title">Link Block</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor sit</a></li>
+          <li><a href="#">Amet consectetur</a></li>
+          <li><a href="#">Praesent vel sem id</a></li>
+          <li><a href="#">Curabitur hendrerit est</a></li>
+          <li class="last"><a href="#">Sed a nulla urna</a></li>
+        </ul>
+      </nav>
+    </section>
+    <!-- / Section -->
+  </div>
+</div>
+<!-- Copyright -->
+<div class="wrapper row4">
+  <footer id="copyright" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    let subButton = document.getElementById('long-running-operation');
+	let unsubButton = document.getElementById('unsubscribe-operation');
+	let updateButton = document.getElementById('update-operation');
+	
+	//var events = "";
+	const eventsArr=[];
+	if(document.getElementById('open-patient-chart').checked){
+		eventsArr.push("open-patient-chart");
+	}
+	else{
+	}
+	if(document.getElementById('close-patient-chart').checked){
+		eventsArr.push("close-patient-chart");
+	}
+	if(document.getElementById('open-imaging-study').checked){
+		eventsArr.push("open-imaging-study");
+	}
+	if(document.getElementById('close-imaging-study').checked){
+		eventsArr.push("close-imaging-study");
+	}
+	//alert(eventsArr);
+
+    subButton.addEventListener('click', () => {
+	
+	
+	const eventsArr=[];
+	if(document.getElementById('open-patient-chart').checked){
+		eventsArr.push("open-patient-chart");
+	}
+	else{
+	}
+	if(document.getElementById('close-patient-chart').checked){
+		eventsArr.push("close-patient-chart");
+	}
+	if(document.getElementById('open-imaging-study').checked){
+		eventsArr.push("open-imaging-study");
+	}
+	if(document.getElementById('open-patient-chart').checked){
+		eventsArr.push("close-imaging-study");
+	}
+      
+	  
+	  socket.emit('long-running-event', {topic: document.getElementById('topic').value, events: eventsArr.toString()});
+    });
+	
+	unsubButton.addEventListener('click', () => {
+      socket.emit('unsubscribe-operation', {data: document.getElementById('topic').value});
+    });
+
+    socket.on('processing-finished', function (data) {
+      //alert(JSON.parse(data).patientId);
+	  
+	  //Reset Image
+	  var img = document.getElementById('subImg');
+	  img.src = "{{ url_for('static', filename='SubscriptionEHRapplicationPending.gif') }}"
+	  
+	  //Update logs
+	  var parent = document.getElementById('log');
+	  var p = document.createElement('p');
+	  p.innerHTML = "Action: "+JSON.parse(data).hubEvent + " Patient: "+JSON.parse(data).patientId+" Accession ID: "+JSON.parse(data).accessionId+".";
+	  parent.appendChild(p);
+	  
+	  document.getElementById('patientId').value=JSON.parse(data).patientId;
+	  document.getElementById('accessionId').value=JSON.parse(data).accessionId;
+	  document.getElementById('patientAction').value=JSON.parse(data).hubEvent;
+      
+    });
+	
+	socket.on('subscribe', function (data) {
+	  var parent = document.getElementById('log');
+	  var p = document.createElement('p');
+	  p.innerHTML = data + "Subsciption to the EHR aplication is successfully added";
+	  var img = document.getElementById('subImg');
+	  img.src = "{{ url_for('static', filename='SubscriptionEHRapplicationSuccess.gif') }}"
+      parent.appendChild(p);
+	});
+	
+	socket.on('unsubscribe', function (data) {
+	  var parent = document.getElementById('log');
+	  var p = document.createElement('p');
+	  p.innerHTML = data + "Subsciption to the EHR aplication is successfully removed";
+      parent.appendChild(p);
+	});
+	
+	
+	updateButton.addEventListener('click', () => {
+      socket.emit('update-operation', {patientId: document.getElementById('patientId').value, accessionId: document.getElementById('accessionId').value, patientAction: document.getElementById('patientAction').value});
+    });
+</script>
+</body>
+</html>
